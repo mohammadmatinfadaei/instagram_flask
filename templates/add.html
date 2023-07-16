@@ -1,0 +1,20 @@
+{%extends'base.html'%}
+
+{%block content%}
+<form action="/add" method="POST" enctype="multipart/form-data">
+   <br><br>
+  <div class="div-logo2">
+    <p class="sign" align="center">پست</p>
+    <center>
+<input type="file" name="file1">
+<textarea class="passs"  align="center" placeholder="متن..." name="textarea" required></textarea>
+<br><br>
+          <div class="btn">  <a class="a-bootun"><input  value="آپلود" type="submit" class="class-input"></a></div><br>
+          <div class="btn"><a class="a-bootun" onclick="history.back()" type="button" >بازگشت</a></div>
+
+        </center>
+
+  </div>
+</form>
+ 
+{%endblock%}

@@ -1,0 +1,51 @@
+{%extends'base.html'%}
+
+{%block content%}
+
+<center>
+<div class="div-logo4 ">
+  <form action="/profile" method="POST" enctype="multipart/form-data">
+              <input class="pass" type="file" align="center" placeholder="آپلود تصویر" name="file1" >
+              <input class="pass" type="submit" align="center" value="آپلود تصویر" >
+</form>
+</center>
+</div>
+  <div class="frame">
+    <div class="center">
+
+      <div class="profile">
+        <div class="imageg">
+          <div class="circle-1">
+          </div>
+          <div class="circle-2"> <img src="{{path}}{{user}}.jpg" width="70" height="70" class="imgg"
+              alt="Jessica Potter ">
+          </div>
+        </div>
+
+        <div class="name">نام کاربری : {{user}} </div>
+
+        <div class="actions">
+
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="box">
+          <span class="value">پست ها</span>
+          <span class="parameter">0 </span>
+        </div>
+        <div class="box">
+          <span class="value">دنبال شونده</span>
+          <span class="parameter">0 </span>
+        </div>
+        <div class="box">
+          <span class="value">دنبال کننده</span>
+          <span class="parameter">0 </span>
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+
+
+{%endblock%}

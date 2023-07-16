@@ -1,0 +1,53 @@
+{%extends'base.html'%}
+
+{%block content%}
+
+</div>
+  <div class="frame">
+    <div class="center">
+
+      <div class="profile">
+        <div class="imageg">
+          <div class="circle-1">
+          </div>
+          <div class="circle-2"> <img src="{{path}}{{Profile.poster}}.jpg" width="70" height="70" class="imgg"
+              alt="Jessica Potter ">
+          </div>
+        </div>
+
+        <div class="name">نام کاربری :{{Profile.poster}} </div>
+
+        <div class="actions">
+
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="box">
+          <span class="value">پست ها</span>
+          <span class="parameter">0 </span>
+        </div>
+        <div class="box">
+          <span class="value">دنبال شونده</span>
+          <span class="parameter">0 </span>
+        </div>
+        <div class="box">
+          <span class="value">دنبال کننده</span>
+          <span class="parameter">0 </span>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+{%if coocki!=Profile.poster:%}
+{%if is_follow==False:%}
+<a href="/follow/{{id}}" class="btn btn-sm animated-button victoria-one">دنبال کردن</a> 
+<a href="/follow/{{Profile.id}}" class="btn btn-sm animated-button victoria-one">پیام</a> 
+{%endif%}
+{%endif%}
+</center>
+{%endblock%}

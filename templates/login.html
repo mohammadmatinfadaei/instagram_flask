@@ -1,0 +1,32 @@
+{%extends'base.html'%}
+
+{%block content%}
+
+<form action="/login" method="POST">
+    <br><br>
+  <div class="div-logo2">
+    <p class="sign" align="center">ورود</p>
+    <form class="form1">
+      <input class="un" type="text" align="center" placeholder="نام" name="user_name_login" required>
+        <input class="pass" type="password" align="center" placeholder="رمز" name="password_login" required  id="myInput">
+        <input type="checkbox" onclick="myFunction()">
+      <center>
+          <div class="btn">  <a class="a-bootun"><input  value="ورود" type="submit" class="class-input"></a></div><br>
+          <div class="btn"><a   class="a-bootun"  href="/register">عضویت</a></div><br>
+          <div class="btn"><a class="a-bootun" onclick="history.back()" type="button" >بازگشت</a></div>
+
+        </center>
+        </form>
+  </div>
+
+</form>
+<script>function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+
+}</script>
+{%endblock%}

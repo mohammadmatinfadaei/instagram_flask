@@ -1,0 +1,61 @@
+{%extends'base.html'%}
+
+{%block content%}
+
+<br>
+<br><br>
+
+
+{%if user:%}
+
+{%for i in item:%}
+
+<div class="div-index" ><a href="/profile2/{{i.id}}">
+    <img src="{{path}}{{i.poster}}.jpg" width="70" height="70" class="imgg"
+    alt="Jessica Potter ">  </a>  <p  class="text-post" name="name_poster">{{i.poster}}</p>
+
+
+    <img class="img-index" src=" {{i.Picture}}"> <br /><br />
+    <p class="text-post"> {{i.text}}</p>
+
+    {%if user== i.poster%}
+<a href="/delete/{{i.id}}"><img class="svg" src="/static/icon/trash.svg" alt=""></a>
+{%endif%}<img class="svg" src="/static/icon/heartfull.svg" alt=""><img class="svg" src="/static/icon/herat.svg" alt="">
+
+</div>
+
+{%endfor%}
+
+
+
+
+
+
+
+
+
+
+{%else:%}
+<br><br>
+<div class="div-logo"> <center><img src="./static/—Pngtree—instagram icon instagram logo_3584852.png"
+    style="height: 50%;width: 50%; margin-top: 110px;"></center>
+</div><br>
+<div class="container">
+
+    <div class="btn"><a href="/login" class="a-bootun">ورود</a></div>
+    <div class="btn"><a href="/register" class="a-bootun">ثبت نام</a></div>
+</div>
+
+<br><br><br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+
+{%endif%}
+
+</div>
+{%endblock%}

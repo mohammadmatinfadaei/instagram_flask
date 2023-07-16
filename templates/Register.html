@@ -1,0 +1,46 @@
+
+{%extends'base.html'%}
+
+{%block content%}
+
+<form action="/register" method="POST" enctype="multipart/form-data">    <br><br>
+
+  <div class="div-logo3">
+    <p class="sign" align="center">ثبت نام</p>
+    <form class="form1" action="signup" method="post">
+      <input class="un " type="text" align="center" placeholder="نام" name="user_name_register" required>
+      <input class="pass" type="password" align="center" placeholder="رمز" name="password_register" required id="myInput">
+      <input class="pass" type="password" align="center" placeholder="تکرار رمز" name="password_register2" required id="mmYInput">
+      <input type="checkbox" onclick="myFunction()">
+
+
+
+      <center>
+                    <div class="btn">  <a class="a-bootun"><input  value="عضویت" type="submit" class="class-input"></a></div><br>
+
+                 <div class="btn"><a   class="a-bootun"  href="/login">ورود</a></div><br>
+
+          <div class="btn"><a class="a-bootun" onclick="history.back()" type="button" >بازگشت</a></div>
+
+          </center>
+    </form>
+  </div>
+
+
+</form>
+<script>function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+    var y = document.getElementById("mmYInput");
+  if (y.type === "password") {
+    y.type = "text";
+  } else {
+    y.type = "password";
+  }
+}</script>
+{%endblock%}
+
